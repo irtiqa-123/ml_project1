@@ -38,7 +38,6 @@ class DataTransformationConfig:
     transformed_object_file_path: str = os.path.join(data_transformation_dir,
                                                      DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR,
                                                      PREPROCSSING_OBJECT_FILE_NAME)
-    
 @dataclass
 class ModelTrainerConfig:
     model_trainer_dir: str = os.path.join(training_pipeline_config.artifact_dir, MODEL_TRAINER_DIR_NAME)
@@ -51,7 +50,7 @@ class ModelTrainerConfig:
     _max_depth = MIN_SAMPLES_SPLIT_MAX_DEPTH
     _criterion = MIN_SAMPLES_SPLIT_CRITERION
     _random_state = MIN_SAMPLES_SPLIT_RANDOM_STATE
-
+    
 @dataclass
 class ModelEvaluationConfig:
     changed_threshold_score: float = MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE
